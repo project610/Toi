@@ -1309,3 +1309,445 @@ a {
     transform: none;
   }
 }
+
+/* ==========================================================
+   FINAL MOBILE FIX — premium mobile invitation layout
+   ========================================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.invite-card,
+.screen,
+.calendar-card,
+.address-block,
+.program-list,
+.rsvp-form,
+.countdown-band {
+  max-width: 100%;
+}
+
+button,
+a,
+.choice span {
+  -webkit-tap-highlight-color: rgba(170, 132, 72, 0.18);
+}
+
+@media (max-width: 560px) {
+  body { background: var(--paper); }
+
+  .invite-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100svh;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .invite-card::before,
+  .invite-card::after {
+    width: 38px;
+    opacity: 0.045;
+    background:
+      url("assets/ornament-round.png") center 96px / 132px 132px no-repeat,
+      url("assets/ornament-divider.png") center 48% / 170px 38px no-repeat,
+      url("assets/ornament-round.png") center calc(100% - 90px) / 132px 132px no-repeat;
+  }
+
+  .invite-card::before { left: -28px; }
+  .invite-card::after { right: -28px; }
+
+  .screen {
+    min-height: auto;
+    padding: 64px 18px 54px;
+    overflow: hidden;
+  }
+
+  .hero-screen {
+    min-height: 100svh;
+    padding-top: calc(86px + env(safe-area-inset-top));
+    padding-bottom: 54px;
+    justify-content: center;
+  }
+
+  .intro-screen,
+  .date-screen,
+  .address-screen,
+  .map-screen { min-height: auto; }
+
+  .address-screen,
+  .map-screen,
+  .wishes-screen,
+  .rsvp-screen { padding-top: 54px; }
+
+  .music-toggle {
+    top: calc(10px + env(safe-area-inset-top));
+    right: 10px;
+    min-height: 42px;
+    max-width: calc(100vw - 20px);
+    padding: 7px 10px 7px 8px;
+    font-size: 0.7rem;
+    letter-spacing: 0.035em;
+  }
+
+  .music-disc { width: 26px; height: 26px; }
+
+  .script-title { margin-bottom: 18px; }
+
+  .title-main {
+    font-size: clamp(1.22rem, 7.2vw, 1.85rem);
+    line-height: 1.12;
+    letter-spacing: 0.035em;
+    overflow-wrap: anywhere;
+  }
+
+  .title-script {
+    font-size: clamp(2.05rem, 12vw, 3.25rem);
+    line-height: 1.04;
+    letter-spacing: 0.01em;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    text-wrap: balance;
+  }
+
+  .title-number {
+    font-size: clamp(4.9rem, 27vw, 7.35rem);
+    line-height: 0.84;
+    letter-spacing: -0.035em;
+  }
+
+  .jubilee-mark {
+    width: min(314px, 88vw);
+    margin: 2px auto 0;
+  }
+
+  .age span { margin-top: 8px; }
+
+  .pale-ornament {
+    width: 196px;
+    height: 196px;
+    opacity: 0.105;
+  }
+
+  .ornament-top-right { top: 30px; right: -106px; }
+  .ornament-middle-right { top: 115px; right: -142px; }
+  .ornament-middle-left { top: 190px; left: -140px; }
+  .ornament-bottom-right { right: -142px; bottom: -78px; }
+
+  .text-body,
+  .body-text,
+  .invitation-text,
+  .map-copy,
+  .rsvp-copy,
+  .wishes-screen p {
+    font-size: clamp(0.94rem, 4vw, 1.04rem);
+    line-height: 1.64;
+    letter-spacing: 0.005em;
+  }
+
+  .invitation-text,
+  .map-copy,
+  .rsvp-copy {
+    max-width: 100%;
+    margin-top: 54px;
+  }
+
+  .calendar-card {
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px 12px;
+    border-radius: 22px;
+  }
+
+  .calendar-head { gap: 12px; margin-bottom: 16px; }
+
+  .calendar-head strong,
+  .calendar-head span {
+    font-size: clamp(1.28rem, 7.4vw, 1.85rem);
+    letter-spacing: 0.045em;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 9px 3px;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+  }
+
+  .calendar-grid span { min-height: 29px; }
+
+  .calendar-grid .weekday {
+    min-height: 23px;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+
+  .selected-day::before { width: 36px; height: 36px; }
+
+  .date-time-bar {
+    width: 100%;
+    min-height: 58px;
+    margin-top: 30px;
+    padding: 0 13px;
+    border-radius: 0 16px 16px 0;
+  }
+
+  .date-time-bar strong,
+  .date-time-bar span {
+    font-size: clamp(0.76rem, 3.4vw, 0.94rem);
+    letter-spacing: 0.045em;
+  }
+
+  .gold-divider,
+  .gold-flourish {
+    width: min(310px, 88%);
+    height: 50px;
+    margin-top: 22px;
+  }
+
+  .gold-flourish { margin-bottom: 46px; }
+
+  .address-block {
+    margin-top: 38px;
+    padding: 21px 17px;
+    border-radius: 22px;
+  }
+
+  .address-block strong {
+    font-size: clamp(1.25rem, 6.8vw, 1.75rem);
+    line-height: 1.16;
+    letter-spacing: 0.025em;
+  }
+
+  .address-block p {
+    margin-top: 24px;
+    font-size: 0.95rem;
+    line-height: 1.62;
+  }
+
+  .map-icon {
+    width: 66px;
+    height: 66px;
+    margin: 22px auto 24px;
+    border-radius: 13px;
+  }
+
+  .map-icon span {
+    inset: 16px 18px;
+    border-width: 3px;
+  }
+
+  .pill-button,
+  .submit-button {
+    width: 100%;
+    min-width: 0;
+    min-height: 55px;
+    padding: 14px 17px;
+    font-size: 0.88rem;
+    line-height: 1.25;
+    letter-spacing: 0.05em;
+  }
+
+  .countdown-band { padding: 42px 14px 38px; }
+
+  .countdown-band::after {
+    top: -95px;
+    left: -125px;
+    width: 220px;
+    height: 220px;
+    opacity: 0.12;
+  }
+
+  .timer-heart {
+    width: 74px;
+    height: 66px;
+    margin-bottom: 14px;
+  }
+
+  .timer-heart::before,
+  .timer-heart::after {
+    top: 14px;
+    width: 38px;
+    height: 56px;
+    border-width: 5px;
+  }
+
+  .timer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
+    max-width: 100%;
+  }
+
+  .timer strong { font-size: clamp(1.38rem, 7.2vw, 1.85rem); }
+
+  .timer span {
+    font-size: clamp(0.54rem, 2.4vw, 0.66rem);
+    letter-spacing: 0.025em;
+  }
+
+  .program-list {
+    width: 100%;
+    gap: 12px;
+    margin-top: 34px;
+  }
+
+  .program-list div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 15px 14px;
+    border-radius: 17px;
+    text-align: center;
+  }
+
+  .program-list span { font-size: 0.88rem; }
+
+  .program-list p {
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+
+  .wishes-screen {
+    padding-top: 58px;
+    padding-bottom: 62px;
+  }
+
+  .wishes-screen p { margin-top: 28px; }
+  .rsvp-screen { padding-bottom: 48px; }
+  .rsvp-screen .top { margin-bottom: 50px; }
+
+  .rsvp-copy {
+    max-width: 100%;
+    margin-top: 42px;
+  }
+
+  .rsvp-form {
+    width: 100%;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .choice span {
+    min-height: 64px;
+    padding: 13px 15px 13px 54px;
+    border-radius: 24px;
+    font-size: 0.89rem;
+    line-height: 1.38;
+  }
+
+  .choice span::before {
+    left: 17px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .choice span::after {
+    left: 24px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .footer-link { padding: 14px 12px 28px; }
+
+  .footer-link a {
+    font-size: 0.8rem;
+    letter-spacing: 0.055em;
+  }
+}
+
+@media (max-width: 430px) {
+  .screen {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-screen { padding-top: calc(78px + env(safe-area-inset-top)); }
+
+  .jubilee-mark { width: min(292px, 90vw); }
+
+  .title-number { font-size: clamp(4.55rem, 26vw, 6.7rem); }
+
+  .title-script { font-size: clamp(1.95rem, 11.4vw, 2.9rem); }
+
+  .calendar-grid {
+    font-size: 0.86rem;
+    gap: 8px 2px;
+  }
+
+  .calendar-card {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .date-time-bar {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 12px 14px;
+    text-align: center;
+    border-left: 0;
+    border-top: 3px solid var(--gold);
+    border-radius: 16px;
+  }
+
+  .date-time-bar span { text-align: center; }
+}
+
+@media (max-width: 380px) {
+  .screen {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .music-toggle {
+    font-size: 0;
+    padding: 7px;
+  }
+
+  .music-disc {
+    width: 28px;
+    height: 28px;
+  }
+
+  .jubilee-mark { width: min(270px, 91vw); }
+
+  .title-main { font-size: clamp(1.05rem, 6.8vw, 1.55rem); }
+
+  .title-script { font-size: clamp(1.75rem, 10.8vw, 2.55rem); }
+
+  .title-number { font-size: clamp(4.15rem, 25vw, 6.1rem); }
+
+  .calendar-head strong,
+  .calendar-head span { font-size: 1.22rem; }
+
+  .calendar-grid {
+    font-size: 0.8rem;
+    gap: 7px 1px;
+  }
+
+  .calendar-grid span { min-height: 26px; }
+
+  .selected-day::before {
+    width: 32px;
+    height: 32px;
+  }
+
+  .timer span { font-size: 0.52rem; }
+
+  .choice span {
+    padding-left: 50px;
+    font-size: 0.84rem;
+  }
+}
