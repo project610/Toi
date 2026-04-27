@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Туған күнге шақыру</title>
+  <meta
+    name="description"
+    content="Әкеміздің 60 жас мерейтойына арналған ұлттық стильдегі шақыру"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Marck+Script&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <noscript>
+    <style>
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+  <main class="invite-card" id="top">
+    <audio id="inviteAudio" src="assets/audio_1766864525634_tykt.mp3" preload="metadata" loop></audio>
+    <button class="music-toggle button-text" id="musicToggle" type="button" aria-pressed="false">
+      <span class="music-disc" aria-hidden="true">
+        <span></span>
+      </span>
+      <span class="music-label">Әуен қосу</span>
+    </button>
+
+    <section class="screen hero-screen reveal">
+      <div class="pale-ornament ornament-top-right" aria-hidden="true"></div>
+
+      <p class="script-title title-script font-script gold-text section-title">Туған күн</p>
+
+      <div class="jubilee-mark" aria-label="60 жас">
+        <div class="wreath" aria-hidden="true">
+          <span></span>
+        </div>
+        <div class="age">
+          <strong class="title-number gold-number">60</strong>
+          <span class="title-main font-heading gold-text">ЖАС</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen intro-screen reveal">
+      <div class="pale-ornament ornament-middle-right" aria-hidden="true"></div>
+
+      <h1 class="script-heading title-script font-script gold-text section-title">Құрметті қонақтар!</h1>
+      <p class="invitation-text text-body body-text font-body">
+        <!-- Именинниктің атын script.js ішіндегі CONFIG.honoreeName жолынан өзгертіңіз. -->
+        Сіздерді <span id="honoreeName">әкеміздің</span> 60 жас мерейтойына арналған салтанатты ақ
+        дастарханымыздың қадірлі қонағы болуға шақырамыз.
+      </p>
+    </section>
+
+    <section class="screen date-screen reveal" aria-labelledby="dateTitle">
+      <div class="pale-ornament ornament-middle-left" aria-hidden="true"></div>
+
+      <h2 class="script-heading title-script font-script gold-text section-title" id="dateTitle">Өтетін күні:</h2>
+
+      <div class="calendar-card" aria-label="Мамыр 2026 күнтізбесі">
+        <div class="calendar-head">
+          <strong class="title-main font-heading gold-text" id="calendarMonth">Мамыр</strong>
+          <span class="title-main font-heading gold-text" id="calendarYear">2026</span>
+        </div>
+
+        <div class="calendar-grid">
+          <span class="weekday text-small date-text">ДС</span>
+          <span class="weekday text-small date-text">СС</span>
+          <span class="weekday text-small date-text">СР</span>
+          <span class="weekday text-small date-text">БС</span>
+          <span class="weekday text-small date-text">ЖМ</span>
+          <span class="weekday text-small date-text">СБ</span>
+          <span class="weekday text-small date-text">ЖС</span>
+
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+          <span>11</span>
+          <span>12</span>
+          <span>13</span>
+          <span>14</span>
+          <span>15</span>
+          <span>16</span>
+          <span>17</span>
+          <span>18</span>
+          <span>19</span>
+          <span>20</span>
+          <span>21</span>
+          <span>22</span>
+          <span class="selected-day" id="calendarDay">23</span>
+          <span>24</span>
+          <span>25</span>
+          <span>26</span>
+          <span>27</span>
+          <span>28</span>
+          <span>29</span>
+          <span>30</span>
+          <span>31</span>
+        </div>
+      </div>
+
+      <div class="date-time-bar">
+        <!-- Датаны script.js ішіндегі CONFIG.eventDate, CONFIG.dayText жолдарынан өзгертіңіз. -->
+        <strong class="text-small date-text" id="dayText">23 мамыр</strong>
+        <!-- Уақытты script.js ішіндегі CONFIG.eventTimeText жолынан өзгертіңіз. -->
+        <span class="text-small date-text" id="eventTimeText">16:00</span>
+      </div>
+
+      <div class="gold-divider" aria-hidden="true"></div>
+    </section>
+
+    <section class="screen address-screen reveal" id="address" aria-labelledby="addressTitle">
+      <h2 class="script-heading title-script font-script gold-text section-title" id="addressTitle">Мекен-жайымыз:</h2>
+
+      <div class="address-block text-body body-text font-body">
+        <!-- Қаланы script.js ішіндегі CONFIG.city жолынан өзгертіңіз. -->
+        <strong class="title-main font-heading gold-text" id="eventCity">Астана</strong>
+        <!-- Адресті және ресторанды script.js ішіндегі CONFIG.address / CONFIG.restaurantName жолдарынан өзгертіңіз. -->
+        <p>
+          <span id="eventAddress">Ғабиден Мұстафин көшесі, 10/1</span><br />
+          <span id="restaurantName">Tabys Hall</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="screen map-screen reveal" aria-labelledby="mapTitle">
+      <div class="pale-ornament ornament-bottom-right" aria-hidden="true"></div>
+
+      <h2 class="script-heading title-script font-script gold-text section-title" id="mapTitle">Қалай жетуге болады?</h2>
+      <p class="map-copy text-body body-text font-body">
+        Сізге ыңғайлы болу үшін төмендегі сілтемені қолданыңыз.
+      </p>
+
+      <div class="map-icon" aria-hidden="true">
+        <span></span>
+      </div>
+
+      <!-- Карта сілтемесін script.js ішіндегі CONFIG.mapLink жолынан өзгертіңіз. -->
+      <a class="pill-button button-text" id="mapBtn" href="#" target="_blank" rel="noopener">
+        Картаны ашу
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <section class="countdown-band reveal" aria-labelledby="timerTitle">
+      <div class="timer-heart" aria-hidden="true"></div>
+      <h2 class="title-main text-small font-heading gold-text date-text" id="timerTitle">Той салтанатына дейін:</h2>
+
+      <div class="timer" id="timer">
+        <div>
+          <strong id="days">00</strong>
+          <span class="text-small date-text">күн</span>
+        </div>
+        <div>
+          <strong id="hours">00</strong>
+          <span class="text-small date-text">сағат</span>
+        </div>
+        <div>
+          <strong id="minutes">00</strong>
+          <span class="text-small date-text">минут</span>
+        </div>
+        <div>
+          <strong id="seconds">00</strong>
+          <span class="text-small date-text">секунд</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen program-screen reveal" aria-labelledby="programTitle">
+      <div class="gold-flourish" aria-hidden="true"></div>
+      <h2 class="script-heading title-script font-script gold-text section-title" id="programTitle">Бағдарлама:</h2>
+
+      <div class="program-list text-body body-text font-body">
+        <div>
+          <span>16:00</span>
+          <p>Қонақтарды қарсы алу</p>
+        </div>
+        <div>
+          <span>16:30</span>
+          <p>Құттықтау</p>
+        </div>
+        <div>
+          <span>17:00</span>
+          <p>Дастархан</p>
+        </div>
+        <div>
+          <span>19:00</span>
+          <p>Фото және музыка</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen rsvp-screen reveal" id="rsvp" aria-labelledby="rsvpTitle">
+      <div class="gold-flourish top" aria-hidden="true"></div>
+
+      <h2 class="script-heading title-script font-script gold-text section-title" id="rsvpTitle">Сауалнама:</h2>
+      <p class="rsvp-copy text-body body-text font-body">Келуіңізді растауыңызды сұраймыз!</p>
+
+      <form class="rsvp-form">
+        <label class="choice">
+          <input type="radio" name="attendance" value="Иә, барамын!" checked />
+          <span>Иә, барамын!</span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="attendance" value="Жұбайыммен бірге барамын" />
+          <span>Жұбайыммен бірге барамын</span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="attendance" value="Өкінішке орай, келе алмаймын" />
+          <span>Өкінішке орай, келе алмаймын</span>
+        </label>
+
+        <!-- WhatsApp нөмірін және дайын мәтінді script.js ішіндегі CONFIG.whatsappNumber / CONFIG.whatsappText жолдарынан өзгертіңіз. -->
+        <a class="submit-button button-text" id="whatsappBtn" href="#" target="_blank" rel="noopener">
+          Жауап беру
+        </a>
+      </form>
+    </section>
+
+    <footer class="footer-link">
+      <a href="#top">Жоғары көтеріңіз</a>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
