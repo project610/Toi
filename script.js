@@ -2,7 +2,7 @@ document.documentElement.classList.add("js");
 
 const CONFIG = {
   // Имя именинника / туған күн иесі.
-  honoreeName: "әкеміздің",
+  honoreeName: "әкеміз",
 
   // Дата события для таймера. Формат: YYYY-MM-DDTHH:mm:ss+05:00.
   eventDate: "2026-05-23T16:00:00+05:00",
